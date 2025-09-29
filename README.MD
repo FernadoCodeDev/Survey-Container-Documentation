@@ -85,7 +85,6 @@ Además, puedes integrar librerías de notificaciones como **react-toastify**, l
 De esta forma, garantizas una mejor experiencia de usuario al manejar tanto confirmaciones como errores dentro de tu aplicación.
 
 ```
-
 import React from "react";
 import { useParams } from "react-router-dom";
 import { SurveyWidget } from "survey-container";
@@ -107,7 +106,6 @@ function SurveyContainer() {
 
 }
 export default SurveyContainer;
-
 ```
 
 
@@ -132,7 +130,6 @@ Además, puedes integrar librerías de notificaciones como **Vue Toastification*
 De esta forma, garantizas una mejor experiencia de usuario al manejar tanto confirmaciones como errores dentro de tu aplicación.
 
 ```
-
 <template>
     <div class="">
         <SurveyWidget :surveyId="surveyId" fetchUrl="Route to access the survey"
@@ -159,13 +156,58 @@ export default {
     }
 };
 </script>
-
 ```
 
 </details>
 
 <details>
 <summary> Integración con Angular </summary>
+
+# Integración con Angular
+
+El componente **SurveyContainer** te permite integrar encuestas de manera sencilla dentro de tu aplicación desarrollada con Angular. Con él, puedes mostrar formularios interactivos y personalizables sin necesidad de implementar toda la lógica desde cero.
+
+## Componente
+
+Para utilizar el componente **SurveyWidget** de la dependencia **survey container**, primero debes importarlo en tu proyecto de Angular. Este componente es flexible, permitiendo usar rutas propias para obtener y guardar encuestas.
+
+Además, puedes integrar librerías de notificaciones como **ngx-toastr**, lo que facilita mostrar mensajes personalizados, por ejemplo:
+
+- **Encuesta enviada con éxito**
+- **Ocurrió un error al cargar la encuesta**
+De esta forma, garantizas una mejor experiencia de usuario al manejar tanto confirmaciones como errores dentro de tu aplicación.
+
+```
+import { Component } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { SurveyWidget } from "survey-container";
+
+@Component({
+  selector: "app-survey-container",
+  template: `
+    <div class="">
+      <survey-widget
+        [surveyId]="surveyId"
+        [fetchUrl]="'Route to access the survey'"
+        [responseUrl]="'Path to save answers'"
+        [onAlert]="showAlert"
+      ></survey-widget>
+    </div>
+  `,
+})
+export class SurveyContainerComponent {
+  surveyId: string;
+
+  constructor(private route: ActivatedRoute) {
+    this.surveyId = this.route.snapshot.paramMap.get("surveyId");
+  }
+
+  showAlert(message: string) {
+    // Function to display alerts. You can use ngx-toastr
+  }
+}
+
+```
 
 </details>
 
