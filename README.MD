@@ -44,8 +44,8 @@ Importa el paquete según tu framework Y usa el componente con los props necesar
 Una vez configurado todo, podrás mostrar encuestas, recolectar respuestas y analizar métricas fácilmente.
 Disfruta de una integración limpia, extensible y flexible.
 
-
-### Integración del lado del Front-End
+<details>
+<summary> Integración del lado del Front-End </summary>
 
 <details>
 <summary> Props del Front </summary>
@@ -55,13 +55,12 @@ Disfruta de una integración limpia, extensible y flexible.
 | `surveyId`         | `string`                           | ✅ Sí        | Es el ID de la encuesta que quieres mostrar. En esta demo se obtiene desde la URL usando `useParams()`.                                                                                                                                                                               |
 | `fetchUrl`         | `string`                           | ✅ Sí      | Es la URL base para hacer la solicitud **GET** y obtener los datos de la encuesta. Por ejemplo: `http://localhost:3000/api/surveys/survey.php?id=`. Se añadirá automáticamente el `surveyId` al final.                               |
 | `responseUrl`      | `string`                           | ✅ Sí      | Es la URL donde se envían las respuestas con una solicitud **POST**.                                                                                                                                          |
-| `onAlert`          | `(message: string, type?: string)` | ❌ No        | Función que se ejecuta para mostrar una alerta dependiendo del estado de la encuesta (error, éxito, advertencia). Puedes personalizarla como quieras (modal, toast, etc.). En esta demo se usa la librería [`react-toastify`](https://fkhadra.github.io/react-toastify/introduction). |
-| `apiUrl`           | `string`                           | ❌ No        | Si prefieres una URL base en lugar de `fetchUrl` o `responseUrl` individuales, puedes usar este prop como raíz para los endpoints `/surveys` y `/responses`. No se usa en esta demo.                                                                                                  |
+| `onAlert`          | `(message: string, type?: string)` | ❌ No        | Función que se ejecuta para mostrar una alerta dependiendo del estado de la encuesta (error, éxito, advertencia). Puedes personalizarla como quieras (modal, toast, etc.) |
+| `apiUrl`           | `string`                           | ❌ No        | Si prefieres una URL base en lugar de `fetchUrl` o `responseUrl` individuales, puedes usar este prop como raíz para los endpoints `/surveys` y `/responses`.                                                                                                   |
 | `onSubmit`         | `(responses) => Promise<void>`     | ❌ No        | Si quieres manejar tú mismo el envío de respuestas, puedes pasar tu propia función `onSubmit`. Si no se define, se hará un POST automáticamente a `responseUrl`.                                                                                                                      |
 | `loadingText`      | `string`                           | ❌ No        | Texto que se muestra mientras la encuesta está cargando. Por defecto: `"Cargando encuesta..."`.                                                                                                                                                                                       |
 | `submitButtonText` | `string`                           | ❌ No        | Texto del botón de envío. Por defecto: `"Enviar respuestas"`.                                                                                                                                                                                                                         |
 | `className`        | `string`                           | ❌ No        | Clase CSS personalizada para aplicar estilos adicionales al contenedor del widget.                                                                                                                                                                                                    |
-
 
 </details>
 
@@ -80,9 +79,29 @@ Disfruta de una integración limpia, extensible y flexible.
 
 </details>
 
+</details>
 
 
-### Integración del lado del Back-End
+
+<details>
+<summary>  Integración del lado del Back-End </summary>
+
+<details>
+<summary> Tablas de la base de datos </summary>
+
+</details>
+
+<details>
+<summary> Integración con PHP </summary>
+
+</details>
+
+<details>
+<summary> Integración con Node.JS </summary>
+
+</details>
+
+</details>
 
 
 
