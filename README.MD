@@ -175,6 +175,7 @@ Además, puedes integrar librerías de notificaciones como **ngx-toastr**, lo qu
 
 - **Encuesta enviada con éxito**
 - **Ocurrió un error al cargar la encuesta**
+
 De esta forma, garantizas una mejor experiencia de usuario al manejar tanto confirmaciones como errores dentro de tu aplicación.
 
 ```
