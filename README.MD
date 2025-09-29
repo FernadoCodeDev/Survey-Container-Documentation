@@ -85,29 +85,29 @@ Además, puedes integrar librerías de notificaciones como **react-toastify**, l
 De esta forma, garantizas una mejor experiencia de usuario al manejar tanto confirmaciones como errores dentro de tu aplicación.
 
 ```
+
 import React from "react";
 import { useParams } from "react-router-dom";
 import { SurveyWidget } from "survey-container";
 
 function SurveyContainer() {
 
-  const { surveyId } = useParams();
+    const { surveyId } = useParams();
 
-  return (
+    return (
+        <div className="">
+            <SurveyWidget
+                surveyId={surveyId}
+                fetchUrl="Route to access the survey"
+                responseUrl="Path to save answers"
+                onAlert="Function to display alerts. You can use react-toastify"
+            />
+        </div>
+    );
 
-    <div className="">
-     <SurveyWidget
-     surveyId={surveyId}
-     fetchUrl="Ruta para obtener encuesta"
-     responseUrl="Ruta para guardar respuestas"
-     onAlert="Función para mostrar alertas. Puedes usar react-toastify"
-     />
-    </div>
-
-  );
 }
-
 export default SurveyContainer;
+
 ```
 
 
@@ -115,6 +115,52 @@ export default SurveyContainer;
 
 <details>
 <summary> Integración con Vue </summary>
+
+# Integración con Vue JS
+
+El componente **Survey Container** te permite integrar encuestas de manera sencilla dentro de tu aplicación desarrollada con Vue. Con él, puedes mostrar formularios interactivos y personalizables sin necesidad de implementar toda la lógica desde cero.
+
+## Componente
+
+Para utilizar el componente **SurveyWidget** de la dependencia **survey container**, primero debes importarlo en tu proyecto de Vue. Este componente es flexible, permitiendo usar rutas propias para obtener y guardar encuestas.
+
+Además, puedes integrar librerías de notificaciones como **Vue Toastification**, lo que facilita mostrar mensajes personalizados, por ejemplo:
+
+- **Encuesta enviada con éxito**
+- **Ocurrió un error al cargar la encuesta**
+
+De esta forma, garantizas una mejor experiencia de usuario al manejar tanto confirmaciones como errores dentro de tu aplicación.
+
+```
+
+<template>
+    <div class="">
+        <SurveyWidget :surveyId="surveyId" fetchUrl="Route to access the survey"
+            responseUrl="Path to save answers"
+            onAlert="Función para mostrar alertas. Puedes usar vue-toastification" />
+    </div>
+</template>
+
+<script>
+import { useRoute } from 'vue-router';
+import { SurveyWidget } from 'survey-container';
+
+export default {
+    components: {
+        SurveyWidget
+    },
+    setup() {
+        const route = useRoute();
+        const surveyId = route.params.surveyId;
+
+        return {
+            surveyId
+        };
+    }
+};
+</script>
+
+```
 
 </details>
 
