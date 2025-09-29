@@ -1,5 +1,5 @@
 # **Survey Container** 
-![SurveyContainer](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Img-Readme/SurveyContainer.png)
+![SurveyContainer](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Readme/SurveyContainer.png)
 
 # 📦 Survey Container
 
