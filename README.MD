@@ -34,7 +34,6 @@ npm i survey-container
 Las versiones anteriores pueden contener errores ya corregidos. Siempre revisa el package.json y actualiza si es necesario para evitar comportamientos inesperados.
 
 
-
 ### Integra en tu componente 
 
 Importa el paquete según tu framework Y usa el componente con los props necesarios (surveyId, fetchUrl, responseUrl, etc.).
@@ -69,6 +68,48 @@ Disfruta de una integración limpia, extensible y flexible.
 
 <details>
 <summary> Integración con React </summary>
+
+# Integración con React
+
+El componente **SurveyContainer** te permite integrar encuestas de manera sencilla dentro de tu aplicación desarrollada con React. Con él, puedes mostrar formularios interactivos y personalizables sin necesidad de implementar toda la lógica desde cero.
+
+## Componente
+
+Para utilizar el componente **SurveyWidget** de la dependencia **survey container**, primero debes importarlo en tu proyecto de React. Este componente es flexible, permitiendo usar rutas propias para obtener y guardar encuestas.
+
+Además, puedes integrar librerías de notificaciones como **react-toastify**, lo que facilita mostrar mensajes personalizados, por ejemplo:
+
+- **Encuesta enviada con éxito**
+- **Ocurrió un error al cargar la encuesta**
+
+De esta forma, garantizas una mejor experiencia de usuario al manejar tanto confirmaciones como errores dentro de tu aplicación.
+
+```
+import React from "react";
+import { useParams } from "react-router-dom";
+import { SurveyWidget } from "survey-container";
+
+function SurveyContainer() {
+
+  const { surveyId } = useParams();
+
+  return (
+
+    <div className="">
+     <SurveyWidget
+     surveyId={surveyId}
+     fetchUrl="Ruta para obtener encuesta"
+     responseUrl="Ruta para guardar respuestas"
+     onAlert="Función para mostrar alertas. Puedes usar react-toastify"
+     />
+    </div>
+
+  );
+}
+
+export default SurveyContainer;
+```
+
 
 </details>
 
