@@ -44,6 +44,10 @@ Importa el paquete según tu framework Y usa el componente con los props necesar
 Una vez configurado todo, podrás mostrar encuestas, recolectar respuestas y analizar métricas fácilmente.
 Disfruta de una integración limpia, extensible y flexible.
 
+--
+
+# Integración en el Front-End y Back-end
+
 <details>
 <summary> Integración del lado del Front-End </summary>
 
