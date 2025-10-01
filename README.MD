@@ -298,6 +298,7 @@ En la carpeta `response/` se encuentran dos archivos clave:
 Estos endpoints permiten manejar tanto la consulta como el registro de información de manera organizada.
 
 [getResponse.php](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/PHP/response/getResponse.php)
+
 [postResponse.php](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/PHP/response/postResponse.php)
 
 ## surveys
@@ -309,6 +310,7 @@ Dentro de la carpeta `surveys/` se gestionan las encuestas propiamente dichas:
 `survey.php` → Obtiene la información de una encuesta específica a partir de su ID único.
 
 [create.php](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/PHP/surveys/create.php)
+
 [survey.php](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/PHP/surveys/survey.php)
 
 </details>
@@ -359,6 +361,7 @@ En la carpeta `response/` se encuentran dos archivos clave:
 Estos endpoints permiten manejar tanto la consulta como el registro de información de manera organizada.
 
 [getResponse.js](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/NodeJS/response/getResponse.js)
+
 [postResponse.js](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/NodeJS/response/postResponse.js)
 
 ## surveys
@@ -370,6 +373,7 @@ Dentro de la carpeta `surveys/` se gestionan las encuestas propiamente dichas:
 `survey.js` → Obtiene la información de una encuesta específica a partir de su ID único.
 
 [create.js](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/NodeJS/surveys/create.js)
+
 [survey.js](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/NodeJS/surveys/survey.js)
 
 
