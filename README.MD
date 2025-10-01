@@ -224,6 +224,32 @@ Para que el componente **Survey Container** funcione correctamente, es necesario
 <details>
 <summary> Tablas de la base de datos </summary>
 
+Para ejecutar la dependencia se necesitara tener siertos campos en la base de datos, el script de creación de base de datos, tablas y campos requeridos:
+script de creación de base de datos
+
+```
+CREATE TABLE IF NOT EXISTS Survey (
+  id VARCHAR(36) PRIMARY KEY,
+  qualification VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Question (
+  id VARCHAR(36) PRIMARY KEY,
+  text TEXT NOT NULL,
+  surveyId VARCHAR(36),
+  FOREIGN KEY (surveyId) REFERENCES Survey(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS Response (
+  id VARCHAR(36) PRIMARY KEY,
+  content TEXT NOT NULL,
+  questionId VARCHAR(36),
+  FOREIGN KEY (questionId) REFERENCES Question(id) ON DELETE CASCADE
+);
+```
+
+[schema.sql](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Database/schema.sql)
+
 </details>
 
 <details>
