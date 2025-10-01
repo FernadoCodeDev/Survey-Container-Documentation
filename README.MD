@@ -292,6 +292,7 @@ De esta manera, se asegura que cada encuesta cargue únicamente las preguntas co
 En la carpeta `response/` se encuentran dos archivos clave:
 
 `getResponse.php` → Devuelve las respuestas ya almacenadas de una encuesta.
+
 `postResponse.php` → Recibe y guarda las nuevas respuestas enviadas por los usuarios.
 
 Estos endpoints permiten manejar tanto la consulta como el registro de información de manera organizada.
@@ -304,6 +305,7 @@ Estos endpoints permiten manejar tanto la consulta como el registro de informaci
 Dentro de la carpeta `surveys/` se gestionan las encuestas propiamente dichas:
 
 `create.php` → Permite crear una nueva encuesta en el sistema.
+
 `survey.php` → Obtiene la información de una encuesta específica a partir de su ID único.
 
 [create.php](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/PHP/surveys/create.php)
