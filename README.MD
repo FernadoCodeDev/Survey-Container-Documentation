@@ -229,7 +229,7 @@ Para que el componente **Survey Container** funcione correctamente, es necesario
 <details>
 <summary> Integración con PHP </summary>
 
-En el caso de usar PHP, la estructura básica de archivos recomendada es la siguiente:
+En el caso de usar **PHP**, la estructura básica de archivos recomendada es la siguiente:
 
 ```
 Carpeta/
