@@ -311,11 +311,67 @@ Dentro de la carpeta `surveys/` se gestionan las encuestas propiamente dichas:
 [create.php](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/PHP/surveys/create.php)
 [survey.php](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/PHP/surveys/survey.php)
 
-
 </details>
 
 <details>
 <summary> Integración con Node.JS </summary>
+
+En el caso de usar **NodeJS**, la estructura básica de archivos recomendada es la siguiente:
+
+```
+Carpeta/
+├── metrics/    
+│   └── metrics.js           // Obtiene todas las encuestas
+├── questions/    
+│   └── questions.js         // Obtiene las preguntas de una encuesta
+├── response/    
+│   ├── getResponse.js       // Obtiene las respuestas
+│   └── postResponse.js      // Guarda las respuestas
+├── surveys/    
+│   ├── create.js            // Crea una nueva encuesta
+│   └── survey.js            // Obtiene una encuesta por ID
+```
+
+## metrics
+
+El archivo `metrics.js` expone un endpoint encargado de recuperar todas las encuestas disponibles.
+
+Esto permite, por ejemplo, generar reportes o listados globales para su administración.
+
+[metrics.js](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/NodeJS/metrics/metrics.js)
+
+## questions
+
+El archivo `questions.js` obtiene las preguntas asociadas a una encuesta específica.
+
+De esta manera, se asegura que cada encuesta cargue únicamente las preguntas correspondientes a su configuración.
+
+[questions.js](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/NodeJS/questions/questions.js)
+
+## response
+
+En la carpeta `response/` se encuentran dos archivos clave:
+
+`getResponse.js` → Devuelve las respuestas ya almacenadas de una encuesta.
+
+`postResponse.js` → Recibe y guarda las nuevas respuestas enviadas por los usuarios.
+
+Estos endpoints permiten manejar tanto la consulta como el registro de información de manera organizada.
+
+[getResponse.js](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/NodeJS/response/getResponse.js)
+[postResponse.js](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/NodeJS/response/postResponse.js)
+
+## surveys
+
+Dentro de la carpeta `surveys/` se gestionan las encuestas propiamente dichas:
+
+`create.js` → Permite crear una nueva encuesta en el sistema.
+
+`survey.js` → Obtiene la información de una encuesta específica a partir de su ID único.
+
+[create.js](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/NodeJS/surveys/create.js)
+[survey.js](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/NodeJS/surveys/survey.js)
+
 
 </details>
 
