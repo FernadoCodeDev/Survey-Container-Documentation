@@ -219,6 +219,8 @@ export class SurveyContainerComponent {
 <details>
 <summary>⚙️ Integración del lado del Back-End</summary>
 
+Para que el componente **Survey Container** funcione correctamente, es necesario configurar en el backend una serie de endpoints que gestionen encuestas, preguntas, métricas y respuestas.
+
 <details>
 <summary> Tablas de la base de datos </summary>
 
@@ -226,6 +228,61 @@ export class SurveyContainerComponent {
 
 <details>
 <summary> Integración con PHP </summary>
+
+En el caso de usar PHP, la estructura básica de archivos recomendada es la siguiente:
+
+```
+Carpeta/
+├── metrics/    
+│   └── metrics.php           // Obtiene todas las encuestas
+├── questions/    
+│   └── questions.php         // Obtiene las preguntas de una encuesta
+├── response/    
+│   ├── getResponse.php       // Obtiene las respuestas
+│   └── postResponse.php      // Guarda las respuestas
+├── surveys/    
+│   ├── create.php            // Crea una nueva encuesta
+│   └── survey.php            // Obtiene una encuesta por ID
+```
+
+## metrics
+
+El archivo `metrics.php` expone un endpoint encargado de recuperar todas las encuestas disponibles.
+
+Esto permite, por ejemplo, generar reportes o listados globales para su administración.
+
+[metrics.php](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/PHP/metrics/metrics.php)
+
+## questions
+
+El archivo `questions.php` obtiene las preguntas asociadas a una encuesta específica.
+
+De esta manera, se asegura que cada encuesta cargue únicamente las preguntas correspondientes a su configuración.
+
+[questions.php](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/PHP/questions/questions.php)
+
+## response
+
+En la carpeta `response/` se encuentran dos archivos clave:
+
+`getResponse.php` → Devuelve las respuestas ya almacenadas de una encuesta.
+`postResponse.php` → Recibe y guarda las nuevas respuestas enviadas por los usuarios.
+
+Estos endpoints permiten manejar tanto la consulta como el registro de información de manera organizada.
+
+[getResponse.php](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/PHP/response/getResponse.php)
+[postResponse.php](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/PHP/response/postResponse.php)
+
+## surveys
+
+Dentro de la carpeta `surveys/` se gestionan las encuestas propiamente dichas:
+
+`create.php` → Permite crear una nueva encuesta en el sistema.
+`survey.php` → Obtiene la información de una encuesta específica a partir de su ID único.
+
+[create.php](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/PHP/surveys/create.php)
+[survey.php](https://github.com/FernadoCodeDev/Survey-Container-Documentation/blob/main/Backend-Integration/PHP/surveys/survey.php)
+
 
 </details>
 
